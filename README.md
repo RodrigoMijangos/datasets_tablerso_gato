@@ -188,132 +188,18 @@ $$ {PR}_9^{5,4} = ( \frac{9!}{5! . 4!}) \times 2 = 252 $$
 Estos conteos incluyen todos las configuraciones posibles, incluyendo aquellas en las que existen dos ganadores, en las que un jugador gana dos veces o en las que se produce un juego sin terminar, por lo
 que estos casos serán seleccionados y apartados mediante algoritmos computacionales.
 
-## Configuración transpuesta
+## Configuración opuesta
 
-Por cada configuración existe una configuración que he denominado transpuesta.
+Por cada configuración existe una denominada opuesta. Dicha configuración consiste en intercambiar todos los 1 por 2 y todos los 2 por uno, 
+ dando lugar a una nueva configuración en las que existen más círculos que X y viceversa.
 
-Consiste en hacer las filas columnas y las columnas filas.
-
-Ejemplo: 
->
-> Para el arreglo [ 1, 1, 1, 2, 2, 0, 0, 0, 0 ] 
+Ejemplo:
+> Para la configuración: [ 1, 1, 1, 2, 2, 0, 0, 0, 0 ]
 > 
-> Existe el arreglo [ 1, 2, 0, 1, 2, 0, 1, 0, 0 ]
->
->        | X | X | X |     | X | O |   |  
->        |---|---|---|     |---|---|---|
->        | O | O |   |     | X | O |   |
->        |---|---|---|     |---|---|---|
->        |   |   |   |     | X |   |   |
-
-## Configuración inversa
-
-Por cada configuración existe una configuración que he denominado inversa.
-
-El orden de los elementos se cambia hacia su extremo más alejado de manera opuesta a excepción de la posición 4 quien se queda justo en donde está.
-
-Ejemplo: 
->
-> Para el arreglo [ 1, 1, 1, 2, 2, 0, 0, 0, 0 ] 
-> 
-> Existe el arreglo [ 0, 0, 0, 0, 2, 2, 1, 1, 1 ]
->
->        | X | X | X |     |   |   |   |  
->        |---|---|---|     |---|---|---|
->        | O | O |   |     |   | O | O |
->        |---|---|---|     |---|---|---|
->        |   |   |   |     | X | X | X |
-
-## Configuración espejo
-
-Por cada configuración existe una configuración que he denominado espejo.
-
-En esta configuración las columnas cambian de lugar a excepción de la columna del medio que permanece estática.
-
-Ejemplo: 
->
-> Para el arreglo [ 1, 1, 1, 2, 2, 0, 0, 0, 0 ] 
-> 
-> Existe el arreglo [ 1, 1, 1, 0, 2, 2, 0, 0, 0 ]
->
->        | X | X | X |     | X | X | X |  
->        |---|---|---|     |---|---|---|
->        | O | O |   |     |   | O | O |
->        |---|---|---|     |---|---|---|
->        |   |   |   |     |   |   |   |
-
-## Configuración de espejo transpuesto
-
-Por cada configuración existe una configuración que he denominado espejo transpuesto.
-
-A la configuración transpuesta se le saca su configuración espejo.
-
-Ejemplo: 
->
-> Para el arreglo [ 1, 1, 1, 2, 2, 0, 0, 0, 0 ] 
-> 
-> Existe el arreglo [ 0, 2, 1, 0, 2, 1, 0, 0, 1 ]
->
->        | X | X | X |     |   | O | X |  
->        |---|---|---|     |---|---|---|
->        | O | O |   |     |   | O | X |
->        |---|---|---|     |---|---|---|
->        |   |   |   |     |   |   | X |
-
-## Coonfiguración espejo invertido
-
-Por cada configuración existe una configuración que he denominado espejo invertido.
-
-En esta configuración usa la configuración invertida y se le saca su configuración espejo.
-
-Ejemplo: 
->
-> Para el arreglo [ 1, 1, 1, 2, 2, 0, 0, 0, 0 ]  
-> 
-> Existe el arreglo [ 0, 0, 0, 2, 2, 0, 1, 1, 1 ]
->
->        | X | X | X |     |   |   |   |  
->        |---|---|---|     |---|---|---|
->        | O | O |   |     | O | O |   |
->        |---|---|---|     |---|---|---|
->        |   |   |   |     | X | X | X |
-
-## Configuración transpuesta invertida
-
-Por cada configuración existe una configuración que he denominado espejo transpuesto.
-
-En esta configuración usa la configuración invertida y se le saca su configuración transpuesta.
-
-Ejemplo: 
->
-> Para el arreglo [ 1, 1, 1, 2, 2, 0, 0, 0, 0 ] 
-> 
-> Existe el arreglo [ 0, 0, 1, 0, 2, 1, 0, 1, 2 ]
->
->        | X | X | X |     |   |   | X |  
->        |---|---|---|     |---|---|---|
->        | O | O |   |     |   | O | X |
->        |---|---|---|     |---|---|---|
->        |   |   |   |     |   | O | X |
-
-## Configuración espejo transpuesto invertido
-
-Por cada configuración existe una configuración que he denominado espejo transpuesto invertido.
-
-En esta configuración usa la configuración espejo transpuesto y se saca su configuración invertida o se usa la configuración transpuesta invertida y se saca su configuración espejo.
-
-Ejemplo: 
->
-> Para el arreglo [ 1, 1, 1, 2, 2, 0, 0, 0, 0 ] 
-> 
-> Existe el arreglo [ 1, 0, 0, 1, 2, 0, 1, 2, 0 ]
->
->        | X | X | X |     | X |   |   |  
->        |---|---|---|     |---|---|---|
->        | O | O |   |     | X | O |   |
->        |---|---|---|     |---|---|---|
->        |   |   |   |     | X | O |   |
-
-
-Estas configuraciones nos ahorrarán mucho tiempo a la hora de generar las configuraciones, pues es mucho más rápido espejear la configuración que generar una
- nueva y hacer todo el proceso de validación por el que pasa
+> Existe la configuración [ 2, 2, 2, 1, 1, 0, 0, 0, 0 ]
+>      
+>       | X | X | X |         | O | O | O |
+>       |---|---|---|         |---|---|---|
+>       | O | O |   |         | X | X |   |
+>       |---|---|---|         |---|---|---|
+>       |   |   |   |         |   |   |   |
