@@ -116,7 +116,7 @@ for x in range(top):
     arr.append(arrAux)
 
 with open("gatoSets.csv", "w") as csvFile:
-    fieldnames = ['POS1', 'POS2', 'POS3', 'POS4', 'POS5', 'POS6', 'POS7', 'POS8', 'Ganador', 'Turnos']
+    fieldnames = ['POS1', 'POS2', 'POS3', 'POS4', 'POS5', 'POS6', 'POS7', 'POS8', 'POS9', 'Ganador', 'Turnos']
     writer = csv.DictWriter(csvFile, fieldnames=fieldnames)
 
     writer.writeheader()
@@ -131,6 +131,7 @@ with open("gatoSets.csv", "w") as csvFile:
                 'POS6': y.tablero.item(5),
                 'POS7': y.tablero.item(6),
                 'POS8': y.tablero.item(7),
+                'POS9': y.tablero.item(8),
                 'Ganador': y.ganador,
                 'Turnos': y.turnos
             })
