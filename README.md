@@ -122,30 +122,30 @@ Para encontrar la cantidad de configuraciones válidas que existen debemos encon
 __Cuando inician las equis (_X_)__
 | Cantidad de Turnos| Cantidad de Espacios Vacios | Cantidad de equis (__X__) | Cantidad de Circulos (__O__) |
 |------------|---------------|------------|----------|
-| 0 | $ 9 - 0 = 9 $ | 0 | 0 |
-| 1 | $ 9 - 1 = 8 $ | 1 | 0 |
-| 2 | $ 9 - 2 = 7 $ | 1 | 1 |
-| 3 | $ 9 - 3 = 6 $ | 2 | 1 |
-| 4 | $ 9 - 4 = 5 $ | 2 | 2 |
-| 5 | $ 9 - 5 = 4 $ | 3 | 2 |
-| 6 | $ 9 - 6 = 3 $ | 3 | 3 |
-| 7 | $ 9 - 7 = 2 $ | 4 | 3 |
-| 8 | $ 9 - 8 = 1 $ | 4 | 4 |
-| 9 | $ 9 - 9 = 0 $ | 5 | 4 |
+| 0 | 9 - 0 = 9 | 0 | 0 |
+| 1 | 9 - 1 = 8 | 1 | 0 |
+| 2 | 9 - 2 = 7 | 1 | 1 |
+| 3 | 9 - 3 = 6 | 2 | 1 |
+| 4 | 9 - 4 = 5 | 2 | 2 |
+| 5 | 9 - 5 = 4 | 3 | 2 |
+| 6 | 9 - 6 = 3 | 3 | 3 |
+| 7 | 9 - 7 = 2 | 4 | 3 |
+| 8 | 9 - 8 = 1 | 4 | 4 |
+| 9 | 9 - 9 = 0 | 5 | 4 |
 
 __Cuando inician los circulos (_O_)__
 | Cantidad de Turnos| Cantidad de Espacios Vacios | Cantidad de equis (__X__) | Cantidad de Circulos (__O__) |
 |------------|---------------|------------|----------|
-| 0 | $ 9 - 0 = 9 $ | 0 | 0 |
-| 1 | $ 9 - 1 = 8 $ | 0 | 1 |
-| 2 | $ 9 - 2 = 7 $ | 1 | 1 |
-| 3 | $ 9 - 3 = 6 $ | 1 | 2 |
-| 4 | $ 9 - 4 = 5 $ | 2 | 2 |
-| 5 | $ 9 - 5 = 4 $ | 2 | 3 |
-| 6 | $ 9 - 6 = 3 $ | 3 | 3 |
-| 7 | $ 9 - 7 = 2 $ | 3 | 4 |
-| 8 | $ 9 - 8 = 1 $ | 4 | 4 |
-| 9 | $ 9 - 9 = 0 $ | 4 | 5 |
+| 0 | 9 - 0 = 9 | 0 | 0 |
+| 1 | 9 - 1 = 8 | 0 | 1 |
+| 2 | 9 - 2 = 7 | 1 | 1 |
+| 3 | 9 - 3 = 6 | 1 | 2 |
+| 4 | 9 - 4 = 5 | 2 | 2 |
+| 5 | 9 - 5 = 4 | 2 | 3 |
+| 6 | 9 - 6 = 3 | 3 | 3 |
+| 7 | 9 - 7 = 2 | 3 | 4 |
+| 8 | 9 - 8 = 1 | 4 | 4 |
+| 9 | 9 - 9 = 0 | 4 | 5 |
 
 Como se puede observar las tablas son muy similares, pero siguiendo las reglas del juego, respetando que cada jugador debe esperar el turno del otro y que no
  puede cambiar de ficha en mitad de la ronda, con menos de tres simbolos iguales es imposible hacer un tres en raya en cualquier dirección por lo cual es a 
@@ -173,6 +173,7 @@ __Para turnos de 6__
 $$ {PR}_9^{3,3,3} = \frac{9!}{3! . 3! . 3!} = 1,680 $$
 
 __Para turnos de 7__ 
+
 $$ {PR}_9^{2,4,3} = ( \frac{9!}{2! . 4! . 3!}) \times 2 = 2,520 $$
 
 __Para turnos de 8__
